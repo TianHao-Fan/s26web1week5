@@ -1,0 +1,122 @@
+body{
+    background-color:rgb(25, 25, 25);
+    /* you can define colour using red, green, blue - like photoshop */
+    color: white;
+    /* (almost) every element inside the body will inherit this text colour,
+    so you don't have to style every element separately */
+
+    /*  to change the font, use font-family - 
+    this is also an inherited property */
+    /* provide a list as a fall-back, in case the user doesn't have
+    a specific font */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* to target an id on the page, use # */
+#container{
+    /* to centre your site on the page, use margin */
+    /* margin is the space around an element 
+    (pushing it away from other elements) */
+    /* if you automatically apply an equal amount of space 
+    on both sides of an element, it will centre the element */
+    margin: 0 auto;
+    width: 800px;
+}
+
+/* the CSS box model goes:
+    margin: space between elements
+    border
+    padding: space between content and the edge of an element
+*/
+h3{
+    background-color: lightblue;
+    /* when adding a border, you need three rules:
+        color
+        size
+        type
+    */
+    border:blanchedalmond 5px dotted;
+
+    /* with padding, if you only give it one value, 
+    it applies the same amount of space on both slides */
+    padding: 15px;
+
+    /* with margin and padding, two values means applying to 
+    top-bottom (first value) and left-right (second value) */
+    margin: 10px 0; 
+}
+
+/* you can style multiple elements at the same time using a , */
+h1, h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* since links have a default style in the browser, 
+we need to style them directly to override this */
+a{
+    color:rgb(169,232,255);
+    /* to remove the underline... */
+    text-decoration: none;
+}
+
+/* to change the link in different "states",
+use pseudo-classes - like with the hover state */
+a:hover{
+    color:rgba(238, 93, 240, 0.864);
+}
+
+/* change the link when the user clicks (imortant for mobile) */
+a:active{
+    color:rgb(110, 240, 98);
+
+    /* there is also a visited state, if the user has been to the page
+    before... but that one isn't used often */
+}
+
+footer{
+    /* sometimes you do just want space on one side of an element... */
+    padding-left: 20px;
+}
+
+/* using space means go inside the first element to look for the second... 
+this example targets only p elements inside the footer */
+/* 0 0 0 2 - two tag name targets */
+footer p{
+    font-size: 12px;
+}
+
+/* 0 0 0 1 - one tag name target */
+p{
+    font-size: 18px;
+}
+
+/* sometimes you want to style multiple elements the same way, 
+but can't target them based on tag name - for this, you can use class
+to target a class, use a . before the name */
+.larger{
+    font-size: 24px;
+}
+
+/*order in CSS matters, but some targets are more important than others...*/
+/* the oeder goes:
+    tag name
+    class
+    id
+
+    specificity value
+    0 0 0 0 - "imoirtant", "id", "class", "tag"
+*/
+/*0 1 0 0 - one id target*/
+#tophead{
+    color: red
+}
+
+/*0 0 0 1 - one tag name target */
+h1{
+    color: rebeccapurple
+}
+
+/* you can change the style of a list using list-style */
+ul{
+    list-style: square; /* would like to use square bullets */
+}
